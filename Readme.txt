@@ -26,4 +26,4 @@ How to Run the test case:
 
 run command below-
 
-robot -T -d "6_Reports\Ace\Purchase Item in PGMall" -t "Purchase Item in PGMall" Stories\Ace\Test_Scenarios.robot
+robot -T -d "Reports\Ace\Purchase Item in PGMall" -t "Purchase Item in PGMall" Stories\Ace\Test_Scenarios.robot
