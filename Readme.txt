@@ -3,6 +3,7 @@ Test Script Structure:
 ================
 i) Generic_Resources
 - Where generic codes, main resource file and generic variables stored.
+- Generic_Keyword_Library.robot is the customized keyword created using javascript and can be use globally in the script.
 - resources.robot file is where all the files and libraries will be referred to. Check the settings section for all those files.
 
 ii) Test Data:
