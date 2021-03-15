@@ -45,32 +45,32 @@ Item Details Page Showing Correct Item
     ${strippedprice} =  strip string    ${pricetext}
     ${numbersprice} =   get substring    ${strippedprice}   2
     set suite variable    ${ITEM_PRICE}      ${numbersprice}
-#    page should contain element    ${ADD_TO_CART_BTN}
-#    mouse over    ${PREVIEW_PHOTO}
-#    wait until element is visible    ${PREVIEW_ZOOM_BOX}
-#    capture page screenshot
-#    click element       ${NEXT_PHOTO_GALLERY}
-#    mouse over    ${PREVIEW_PHOTO}
-#    wait until element is visible    ${PREVIEW_ZOOM_BOX}
-#    Click Element        ${NEXT_PHOTO_GALLERY}
-#    capture page screenshot
-#    Scroll to Center    ${STORE_OVERVIEW}
-#    wait until element is visible    ${STORE_OVERVIEW}      ${timeout}
-#    Wait To Scroll
-#    capture page screenshot
-#    Scroll to Center    ${PRODUCT_SPECIFICATION_HEADER}
-#    wait until element is visible       ${PRODUCT_DETAILS_SECTION}      ${timeout}
-#    Wait To Scroll
-#    capture page screenshot
-#    Scroll to Center         ${PRODUCT_DESCRIPTION_HEADER}
-#    wait until element is visible    ${PRODUCT_DESC_SECTION}        ${timeout}
-#    Wait To Scroll
-#    capture page screenshot
-#    Scroll to Center        ${PRODUCT_REVIEW_HEADER}
-#    wait until element is visible    ${PRODUCT_REVIEW_HEADER}         ${timeout}
-#    Wait To Scroll
-#    capture page screenshot
-#
+    page should contain element    ${ADD_TO_CART_BTN}
+    mouse over    ${PREVIEW_PHOTO}
+    wait until element is visible    ${PREVIEW_ZOOM_BOX}
+    capture page screenshot
+    click element       ${NEXT_PHOTO_GALLERY}
+    mouse over    ${PREVIEW_PHOTO}
+    wait until element is visible    ${PREVIEW_ZOOM_BOX}
+    Click Element        ${NEXT_PHOTO_GALLERY}
+    capture page screenshot
+    Scroll to Center    ${STORE_OVERVIEW}
+    wait until element is visible    ${STORE_OVERVIEW}      ${timeout}
+    Wait To Scroll
+    capture page screenshot
+    Scroll to Center    ${PRODUCT_SPECIFICATION_HEADER}
+    wait until element is visible       ${PRODUCT_DETAILS_SECTION}      ${timeout}
+    Wait To Scroll
+    capture page screenshot
+    Scroll to Center         ${PRODUCT_DESCRIPTION_HEADER}
+    wait until element is visible    ${PRODUCT_DESC_SECTION}        ${timeout}
+    Wait To Scroll
+    capture page screenshot
+    Scroll to Center        ${PRODUCT_REVIEW_HEADER}
+    wait until element is visible    ${PRODUCT_REVIEW_HEADER}         ${timeout}
+    Wait To Scroll
+    capture page screenshot
+
 
 User Add Quantity
     Scroll to Top                    ${DETAILS_PAGE_HEADER}
