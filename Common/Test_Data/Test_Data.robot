@@ -1,5 +1,5 @@
 *** Variables ***
-${vac_brand}      Airbot
+${vac_brand}      Mi Robot
 ${QUANTITYAIRBOT}       2
 
 

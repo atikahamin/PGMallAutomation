@@ -4,7 +4,7 @@ Documentation     This file contains the generic variables that can be used in t
 *** Variables ***
 
 ${browser}        chrome
-${Url}            https://www.pgmall.my/
+${Url}            https://pgmall.my/
 ${usernameData}     buntal@gmail.com
 ${pwud}             kambinG7
 ${timeout}          30s

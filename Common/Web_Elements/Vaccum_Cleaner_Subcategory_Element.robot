@@ -2,7 +2,7 @@
 Resource          ../Test_Data/Test_Data.robot
 
 *** Variables ***
-${AIRBOT}               //div[contains(@class, 'category_product_col_new')]//div[@class='itemdesc' and contains(., '${vac_brand}')]
+${MI_ROBOT}               //div[contains(@class, 'category_product_col_new')]//div[@class='itemdesc']/p[contains(., '${vac_brand}')]
 ${VAC_CLEANER_WEBPAGE_TITLE}      //title[contains(., 'Vacuum Cleaner')]
 ${VAC_CLEANER_TITLE_TEXT}         //span[contains(@class, 'title') and contains(., 'Vacuum Cleaner')]
 ${NO_OF_SEARCH_RESULT_FOUND}      //span[contains(@class, 'title') and contains(., 'Vacuum Cleaner')]/h6[contains(., 'Item Found In Vacuum Cleaner')]

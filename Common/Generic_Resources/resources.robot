@@ -12,24 +12,27 @@ Resource          ../Web_Elements/Homepage_Element.robot
 Resource          ../Web_Elements/Login_Page_Element.robot
 Resource          ../Web_Elements/Checkout_Page_Element.robot
 Resource          ../Web_Elements/Vaccum_Cleaner_Subcategory_Element.robot
-Resource          ../../Stories/Ace/Keywords.robot
+Resource          ../../Stories/PGMALL/Keywords.robot
 Resource          ../Web_Elements/Item_Details_Page_Element.robot
+Resource          ../Web_Elements/Cart_Page_Element.robot
 Resource          Generic_Keyword_Library.robot
 
 
 *** Keywords ***
 
 Navigate to PGmall Webpage
+
     open browser        ${Url}        ${browser}
+    set window size     1920        1080
     maximize browser window
-    wait until element is visible           ${ADS_POPUP}           ${timeout}
-    Click Element                           //*[@id="do-not-show-global-modal"]
+    wait until element is visible           ${ADS_POPUP_CLOSE_BTN}          ${timeout}
     Click Element                           ${ADS_POPUP_CLOSE_BTN}
     wait until element is not visible       ${ADS_POPUP}
     page should contain element             ${HPAGE_HEADER}
     page should contain element             ${HPAGE_BODY}
     page should contain element             ${HPAGE_FOOTER}
     capture page screenshot
+
 
 Login To PGmall
     Navigate to PGmall Webpage
@@ -44,3 +47,12 @@ Login To PGmall Account
     click element    ${SUBMIT_BTN}
     wait until element is visible    ${ACCOUNT_NAME_LOGIN}      ${timeout}
     capture page screenshot
+    wait until element is visible           ${ADS_POPUP_CLOSE_BTN}          ${timeout}
+    Click Element                           ${ADS_POPUP_CLOSE_BTN}
+    wait until element is not visible       ${ADS_POPUP}
+    Click Element    ${LOGGEDIN_PROFILE}
+    wait until element is not visible       ${ACCOUNT_NAME_LOGIN}       ${timeout}
+    ${cartnotempty} =       run keyword and return status    page should contain element        //span[@id="cart-badge"][not(contains(., '0'))]
+    run keyword if      ${cartnotempty}     Clear cart
+
+

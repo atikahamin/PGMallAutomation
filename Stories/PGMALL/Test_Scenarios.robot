@@ -7,6 +7,11 @@ Resource          Keywords.robot
 *** Test Cases ***
 Purchase Item in PGMall
     [Documentation]    To verify user able to purchase item in PGmall
+    ...                 1. User login
+    ...                 2. Search for Vacuum
+    ...                 3. Add 2 vacuum into cart
+    ...                 4. Calculate subtotal price(item+shipment)
+    ...                 5. Verify calculated subtotal matched the displayed subtotal in checkout page
 
     Given Login To PGMall
     When User Hover On Category Menu
@@ -20,7 +25,10 @@ Purchase Item in PGMall
          User Add Item To Cart
     Then Verify Item Is Added to the Cart
     Given User Click Checkout Button
+          User navigated to Cart Page
     When User Navigated to Checkout Page
     Then Verify Correct Item Is Checked Out
-
      [Teardown]    Close Browser
+
+
+
