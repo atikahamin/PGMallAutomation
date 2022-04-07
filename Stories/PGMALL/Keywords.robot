@@ -51,12 +51,6 @@ Item Details Page Showing Correct Item
     ${numbersprice} =   convert to number     ${numbersprice2}
     set test variable    ${ITEM_PRICE}      ${numbersprice}
     page should contain element    ${ADD_TO_CART_BTN}
-    mouse over    ${PREVIEW_PHOTO}
-    sleep    2s
-    wait until element is visible    ${PREVIEW_ZOOM_BOX}        15s
-    capture page screenshot
-    sleep    3s
-    click element by xpath                   ${STORE_OVERVIEW}
     Scroll to Center    ${STORE_OVERVIEW}
     wait until element is visible    ${STORE_OVERVIEW}      ${timeout}
     Wait To Scroll
