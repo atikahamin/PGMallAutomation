@@ -1,6 +1,7 @@
 *** Settings ***
 Library           String
 Library           Collections
+Library           SeleniumLibrary
 Resource          ../../Common/Generic_Resources/resources.robot
 
 *** Keywords ***
@@ -14,15 +15,16 @@ User Hover On Category Menu
     capture page screenshot
 
 User Choose Robot Vacuum Sub Category
-    click element       ${L3_LIST_VAC_CLEANER} 
+    click element       ${L3_LIST_VAC_CLEANER}
     wait until page contains element        ${VAC_CLEANER_WEBPAGE_TITLE}  ${timeout}
+
 
 User Navigated to Robot Vacuum Sub Category
     wait until page contains element        ${VAC_CLEANER_WEBPAGE_TITLE}  ${timeout}
     wait until element is visible           ${VAC_CLEANER_TITLE_TEXT}
     page should contain element             ${NO_OF_SEARCH_RESULT_FOUND}
     page should contain element              ${VAC_CLEANER_BREADCRUMB}
-    
+
 
 All Search Result Is Related to Robot Vacuum Model
     page should contain element    ${PRODUCT_CARD}

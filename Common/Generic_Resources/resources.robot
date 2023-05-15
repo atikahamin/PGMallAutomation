@@ -22,10 +22,13 @@ Resource          Generic_Keyword_Library.robot
 
 Navigate to PGmall Webpage
 
-    open browser        ${Url}        ${browser}
+    open browser        ${Url}        ${browser}         options=add_experimental_option("detach", True)
     set window size     1920        1080
     maximize browser window
+
+Close Ads Popup
     wait until element is visible           ${ADS_POPUP_CLOSE_BTN}          ${timeout}
+    click element                           ${DO_NOT_SHOW_AGAIN_CBOX}
     Click Element                           ${ADS_POPUP_CLOSE_BTN}
     wait until element is not visible       ${ADS_POPUP}
     page should contain element             ${HPAGE_HEADER}
@@ -36,6 +39,8 @@ Navigate to PGmall Webpage
 
 Login To PGmall
     Navigate to PGmall Webpage
+    Close Ads Popup
+    Change Language to English
     Login To PGmall Account
 
 Login To PGmall Account
@@ -47,12 +52,13 @@ Login To PGmall Account
     click element    ${SUBMIT_BTN}
     wait until element is visible    ${ACCOUNT_NAME_LOGIN}      ${timeout}
     capture page screenshot
-    wait until element is visible           ${ADS_POPUP_CLOSE_BTN}          ${timeout}
-    Click Element                           ${ADS_POPUP_CLOSE_BTN}
-    wait until element is not visible       ${ADS_POPUP}
     Click Element    ${LOGGEDIN_PROFILE}
-    wait until element is not visible       ${ACCOUNT_NAME_LOGIN}       ${timeout}
-    ${cartnotempty} =       run keyword and return status    page should contain element        //span[@id="cart-badge"][not(contains(., '0'))]
+    wait until element is visible       ${SLIDE_WINDOW_ACCOUNT_NAME}       ${timeout}
+    click element    ${CLOSE_SIDE_WINDOW}
+    wait until element is not visible     ${SLIDE_WINDOW_ACCOUNT_NAME}
+    ${cartnotempty} =       run keyword and return status    page should contain element        ${CART_IS_EMPTY}
     run keyword if      ${cartnotempty}     Clear cart
 
-
+Change Language to English
+    select from list by value    ${LANGUAGE_DDL}     ${LANGUAGE_ENGLISH}
+    wait until element is visible    ${LOGIN_LINK_ENGLISH}      ${timeout}

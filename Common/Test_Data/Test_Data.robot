@@ -1,6 +1,7 @@
 *** Variables ***
-${vac_brand}      Mi Robot
+${vac_brand}      Midea
 ${QUANTITYAIRBOT}       2
+${LANGUAGE_ENGLISH}     en-gb
 
 
 

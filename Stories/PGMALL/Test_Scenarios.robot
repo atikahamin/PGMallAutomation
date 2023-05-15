@@ -5,7 +5,7 @@ Documentation     Order Item in PG Mall Webpage
 Resource          Keywords.robot
 
 *** Test Cases ***
-Purchase Item in PGMall
+TC_1-Purchase_Item_in_PGMall
     [Documentation]    To verify user able to purchase item in PGmall
     ...                 1. User login
     ...                 2. Search for Vacuum
