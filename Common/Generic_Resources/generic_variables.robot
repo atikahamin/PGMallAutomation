@@ -3,8 +3,9 @@ Documentation     This file contains the generic variables that can be used in t
 
 *** Variables ***
 
-${browser}        chrome
+${browser}        headlesschrome
 ${Url}            https://pgmall.my/
 ${usernameData}     buntal@gmail.com
+${usernameData2}     buku3lima@live.com
 ${pwud}             kambinG7
 ${timeout}          30s

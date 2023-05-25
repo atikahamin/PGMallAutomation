@@ -41,13 +41,14 @@ Login To PGmall
     Navigate to PGmall Webpage
     Close Ads Popup
     Change Language to English
-    Login To PGmall Account
+
 
 Login To PGmall Account
+    [Arguments]    ${userName}      ${password}
     Click Element       ${LOGIN_LINK}
     wait until element is visible    ${LOGIN_PAGE_HEADER}
-    input text    ${USERNAME_TEXTFIELD}     ${usernameData}
-    input text    ${PASSWORD_TEXTFIELD}     ${pwud}
+    input text    ${USERNAME_TEXTFIELD}     ${userName}
+    input text    ${PASSWORD_TEXTFIELD}     ${password}
     capture page screenshot
     click element    ${SUBMIT_BTN}
     wait until element is visible    ${ACCOUNT_NAME_LOGIN}      ${timeout}

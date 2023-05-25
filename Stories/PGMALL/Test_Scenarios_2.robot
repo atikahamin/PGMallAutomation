@@ -5,7 +5,7 @@ Documentation     Order Item in PG Mall Webpage
 Resource          Keywords.robot
 
 *** Test Cases ***
-TC_1-Purchase_Item_in_PGMall
+TC1 Purchase Item in PGMall
     [Documentation]    To verify user able to purchase item in PGmall
     ...                 1. User login
     ...                 2. Search for Vacuum
@@ -14,13 +14,13 @@ TC_1-Purchase_Item_in_PGMall
     ...                 5. Verify calculated subtotal matched the displayed subtotal in checkout page
 
     Given Login To PGMall
-          Login To PGmall Account       ${usernameData}     ${pwud}
+          Login To PGmall Account       ${usernameData2}    ${pwud}
     When User Hover On Category Menu
     Then User Choose Robot Vacuum Sub Category
     Given User Navigated to Robot Vacuum Sub Category
     When All Search Result Is Related to Robot Vacuum Model
-         User Choose One Item From Search Result        ${MI_ROBOT}
-    Then Details Item Page Displayed        ${vac_brand}
+         User Choose One Item From Search Result        ${PANA_VAC}
+    Then Details Item Page Displayed        ${vac_brand2}
     Given Item Details Page Showing Correct Item
     When User Add Quantity
          User Add Item To Cart

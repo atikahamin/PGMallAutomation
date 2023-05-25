@@ -1,0 +1,6 @@
+datasources:03c7e9e511e5b0daa6bfec643ade650e546c1ea7
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:ed346842d58eb0e58b2e2b39f10694b85b8805a8
+--suite Suites.Test Scenarios
+--suite Suites.Test Scenarios 2

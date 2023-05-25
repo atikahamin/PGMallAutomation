@@ -1,6 +1,6 @@
 *** Variables ***
-${DETAILS_PAGE_HEADER}          //*[@id='prod_name' and contains(., '${vac_brand}')]
-${DETAILS_PAGE_BREADCRUMB}      //ul[@class='breadcrumb arob-breadcrumb']/li[contains(., '${vac_brand}')]
+${DETAILS_PAGE_HEADER}          //*[@id='prod_name']
+${DETAILS_PAGE_BREADCRUMB}      //ul[@class='breadcrumb arob-breadcrumb']
 ${DETAILS_PRICE}                grand-total     #//div[@class='price-col']//b[contains(@class, 'p-price')]
 ${GALLERY_PHOTO}                //div[@class='small-img']
 ${PREVIEW_PHOTO}                //div[@class='show-zoom']/div[@class="img-middled"]/img

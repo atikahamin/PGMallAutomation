@@ -34,14 +34,16 @@ All Search Result Is Related to Robot Vacuum Model
 
 
 User Choose One Item From Search Result
-    Scroll to Center    ${MI_ROBOT}
+    [Arguments]     ${item}
+    Scroll to Center    ${item}
     sleep    3s
-    wait until element is visible    ${MI_ROBOT}      8s
-    click element       ${MI_ROBOT}
+    wait until element is visible     ${item}      8s
+    click element        ${item}
 
 Details Item Page Displayed
-    wait until element is visible       ${DETAILS_PAGE_HEADER}     ${timeout}
-    page should contain element         ${DETAILS_PAGE_BREADCRUMB}
+    [Arguments]     ${name}
+    wait until element is visible       ${DETAILS_PAGE_HEADER}\[contains(., '${name}')]     ${timeout}
+    page should contain element         ${DETAILS_PAGE_BREADCRUMB}\/li[contains(., '${name}')]
 
 
 Item Details Page Showing Correct Item
