@@ -2,7 +2,7 @@
 Library           String
 Library           Collections
 Library           SeleniumLibrary
-Resource          ../../Common/Generic_Resources/resources.robot
+Resource          ../Common/Generic_Resources/resources.robot
 
 *** Keywords ***
 User Hover On Category Menu
