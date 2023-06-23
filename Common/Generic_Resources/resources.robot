@@ -12,7 +12,7 @@ Resource          ../Web_Elements/Homepage_Element.robot
 Resource          ../Web_Elements/Login_Page_Element.robot
 Resource          ../Web_Elements/Checkout_Page_Element.robot
 Resource          ../Web_Elements/Vaccum_Cleaner_Subcategory_Element.robot
-Resource          ../../Stories/PGMALL/Keywords.robot
+Resource          ../../Stories/Keywords.robot
 Resource          ../Web_Elements/Item_Details_Page_Element.robot
 Resource          ../Web_Elements/Cart_Page_Element.robot
 Resource          Generic_Keyword_Library.robot

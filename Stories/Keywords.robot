@@ -136,7 +136,9 @@ User navigated to Cart Page
     wait until element is visible       ${CART_FORM}    ${timeout}
     click element                  ${STORE_CBOX}
 #      wait until element is visible    ${SPINNER}        ${timeout}
-    wait until element is not visible       ${SPINNER}
+#    wait until element is not visible       ${SPINNER}
+    #    wait until element is not visible       ${SPINNER}
+    wait until element is visible    //span[@id='merchandise-subtotal'][not(contains(., 'RM 0.00'))]
     wait until element is enabled    ${CHECKOUT_BTN}        ${timeout}
      ${totalpricetext} =      get text        ${CHECKOUT_PRICE}
     ${strippedtotalprice} =  strip string    ${totalpricetext}

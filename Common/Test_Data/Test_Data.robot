@@ -1,6 +1,6 @@
 *** Variables ***
-${vac_brand}      Midea
-${vac_brand2}      Panasonic
+${vac_brand}      Xiaom
+${vac_brand2}      TP Link
 ${QUANTITYAIRBOT}       2
 ${LANGUAGE_ENGLISH}     en-gb
 
